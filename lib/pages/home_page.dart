@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import '../data/mock_data.dart';
 import '../widgets/league_card.dart';
 import '../app_theme.dart';
+import 'package:go_router/go_router.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -38,7 +39,10 @@ class HomePage extends StatelessWidget {
               ListTile(
                 leading: const Icon(Icons.person),
                 title: const Text('Profile'),
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).pop();
+                  context.go('/profile');
+                },
               ),
               ListTile(
                 leading: const Icon(Icons.logout),
