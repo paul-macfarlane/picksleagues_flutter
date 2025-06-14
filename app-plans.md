@@ -173,9 +173,10 @@ Comprised of tabs (at top screen, part top app bar, for a league
 **League Picks**
 
 - If in season and before pick lock, indicate picks are locked and can’t be viewed yet
-- If in season and after pick lock time, view picks for the week for all users
+- If in season and after pick lock time, view picks for the week for all users, the game score, time left in the game/final, and if the pick was successful
 - Can toggle through current week and past weeks
 - If out of season and previous season, can view last season’s last week picks and toggle through other weeks
+- for each user picks are grouped together, a user's
 
 **League Settings**
 
