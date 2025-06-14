@@ -1,6 +1,7 @@
 // sample data schema, use this to mock out the data
 import 'package:flutter/material.dart';
 import '../data/mock_data.dart';
+import 'package:go_router/go_router.dart';
 
 class LeagueCard extends StatelessWidget {
   final MockLeague league;
@@ -22,7 +23,9 @@ class LeagueCard extends StatelessWidget {
               ),
         title: Text(league.name),
         subtitle: Text('${league.sportLeague} • ${league.pickType}'),
-        onTap: () {},
+        onTap: () {
+          context.go('/league/${league.id}');
+        },
       ),
     );
   }

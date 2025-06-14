@@ -4,6 +4,7 @@ import 'pages/home_page.dart';
 import 'pages/profile_page.dart';
 import 'pages/create_league_page.dart';
 import 'pages/join_league_page.dart';
+import 'pages/league_page.dart';
 
 class AppRouter {
   static final GoRouter router = GoRouter(
@@ -22,6 +23,13 @@ class AppRouter {
       GoRoute(
         path: '/join-league',
         builder: (context, state) => const JoinLeaguePage(),
+      ),
+      GoRoute(
+        path: '/league/:id',
+        builder: (context, state) {
+          final leagueId = state.pathParameters['id']!;
+          return LeaguePage(leagueId: leagueId);
+        },
       ),
     ],
     redirect: (context, state) {
