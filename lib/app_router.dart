@@ -2,6 +2,7 @@ import 'package:go_router/go_router.dart';
 import 'pages/login_page.dart';
 import 'pages/home_page.dart';
 import 'pages/profile_page.dart';
+import 'pages/create_league_page.dart';
 
 class AppRouter {
   static final GoRouter router = GoRouter(
@@ -12,6 +13,10 @@ class AppRouter {
       GoRoute(
         path: '/profile',
         builder: (context, state) => const ProfilePage(),
+      ),
+      GoRoute(
+        path: '/create-league',
+        builder: (context, state) => const CreateLeaguePage(),
       ),
     ],
     redirect: (context, state) {

@@ -105,7 +105,7 @@ class HomePage extends StatelessWidget {
               ElevatedButton.icon(
                 icon: const Icon(Icons.add),
                 label: const Text('Create League'),
-                onPressed: () {},
+                onPressed: () => context.go('/create-league'),
               ),
               ElevatedButton.icon(
                 icon: const Icon(Icons.group),
