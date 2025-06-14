@@ -132,11 +132,167 @@ class LeagueMembersTab extends StatelessWidget {
               child: ElevatedButton.icon(
                 icon: const Icon(Icons.person_add),
                 label: const Text('Invite Member'),
-                onPressed: () {}, // Mock
+                onPressed: () => _showInviteModal(context),
               ),
             ),
           ),
       ],
+    );
+  }
+
+  void _showInviteModal(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
+      ),
+      builder: (context) {
+        return DefaultTabController(
+          length: 2,
+          child: Padding(
+            padding: MediaQuery.of(context).viewInsets,
+            child: SizedBox(
+              height: 350,
+              child: Column(
+                children: [
+                  const TabBar(
+                    tabs: [
+                      Tab(text: 'Copy Link'),
+                      Tab(text: 'Search User'),
+                    ],
+                  ),
+                  Expanded(
+                    child: TabBarView(
+                      children: [
+                        // Copy Link Tab
+                        _InviteLinkTab(),
+                        // Search User Tab
+                        _InviteSearchTab(),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        );
+      },
+    );
+  }
+}
+
+class _InviteLinkTab extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    final inviteLink = 'https://picksleagues.app/invite/abc123';
+    return Padding(
+      padding: const EdgeInsets.all(24),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const Text('Share this link to invite someone to the league:'),
+          const SizedBox(height: 16),
+          SelectableText(
+            inviteLink,
+            style: const TextStyle(fontWeight: FontWeight.bold),
+          ),
+          const SizedBox(height: 16),
+          ElevatedButton.icon(
+            icon: const Icon(Icons.copy),
+            label: const Text('Copy Link'),
+            onPressed: () {
+              // Clipboard.setData(ClipboardData(text: inviteLink));
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(content: Text('Link copied! (mock)')),
+              );
+            },
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _InviteSearchTab extends StatefulWidget {
+  @override
+  State<_InviteSearchTab> createState() => _InviteSearchTabState();
+}
+
+class _InviteSearchTabState extends State<_InviteSearchTab> {
+  final _searchController = TextEditingController();
+  final List<Map<String, String>> _mockUsers = [
+    {'id': '4', 'name': 'Chris Green', 'username': 'cgreen'},
+    {'id': '5', 'name': 'Morgan Blue', 'username': 'mblue'},
+    {'id': '6', 'name': 'Jordan Red', 'username': 'jred'},
+  ];
+
+  @override
+  void dispose() {
+    _searchController.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final query = _searchController.text.toLowerCase();
+    final filtered = _mockUsers
+        .where(
+          (u) =>
+              u['name']!.toLowerCase().contains(query) ||
+              u['username']!.toLowerCase().contains(query),
+        )
+        .toList();
+    return Padding(
+      padding: const EdgeInsets.all(16),
+      child: Column(
+        children: [
+          TextField(
+            controller: _searchController,
+            decoration: const InputDecoration(
+              labelText: 'Search by name or username',
+              border: OutlineInputBorder(),
+            ),
+            onChanged: (_) => setState(() {}),
+          ),
+          const SizedBox(height: 16),
+          Expanded(
+            child: filtered.isEmpty
+                ? const Center(child: Text('No users found.'))
+                : ListView.builder(
+                    itemCount: filtered.length,
+                    itemBuilder: (context, i) {
+                      final user = filtered[i];
+                      return ListTile(
+                        leading: CircleAvatar(
+                          backgroundColor: Theme.of(
+                            context,
+                          ).colorScheme.primary,
+                          child: Text(
+                            user['name']![0],
+                            style: const TextStyle(color: Colors.white),
+                          ),
+                        ),
+                        title: Text(user['name']!),
+                        subtitle: Text('@${user['username']}'),
+                        trailing: ElevatedButton(
+                          child: const Text('Invite'),
+                          onPressed: () {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: Text(
+                                  'Invited ${user['name']} (mock)!',
+                                ),
+                              ),
+                            );
+                          },
+                        ),
+                      );
+                    },
+                  ),
+          ),
+        ],
+      ),
     );
   }
 }
