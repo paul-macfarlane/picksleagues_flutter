@@ -166,7 +166,7 @@ Comprised of tabs (at top screen, part top app bar, for a league
 **My Picks**
 
 - If in season and before pick lock, make picks based on available games and league pick type
-- If in season and after pick lock time, view picks for the week
+- If in season and after pick lock time, view picks for the week, the game score, time left in the game/final, and if the pick was successful
 - Can toggle through current week and past weeks
 - If out of season and previous season, can view last season’s last week picks and toggle through other weeks
 
