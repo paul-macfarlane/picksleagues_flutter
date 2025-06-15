@@ -1,16 +1,11 @@
 # picksleagues_flutter
 
-A new Flutter project.
+Cross-Platform Mobile app for Picks Leagues.
 
-## Getting Started
+## Running locally
 
-This project is a starting point for a Flutter application.
+See https://docs.flutter.dev/get-started/install to set up Flutter on your machine.
 
-A few resources to get you started if this is your first Flutter project:
+After setting up on your machine, following instructions on the Flutter docs for running the app locally in iOS or Android.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The recommended approach for this project is to add the Flutter extension to your vs-code based IDE (VsCode, Cursor, etc). I personally recommend installing XCode (if you are on a Mac) and Android Studio (regardsless of platform) and then using the iOS and Android emulators to run the app.
