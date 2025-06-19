@@ -63,6 +63,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '521289064341',
     projectId: 'picksleagues-flutter',
     storageBucket: 'picksleagues-flutter.firebasestorage.app',
+    androidClientId: '521289064341-einjj77h52fcfbivecb51jan4buvrchc.apps.googleusercontent.com',
     iosClientId: '521289064341-lgp9tac6odq2v8lager2ugj4fr9sl6oe.apps.googleusercontent.com',
     iosBundleId: 'com.example.picksleaguesFlutter',
   );

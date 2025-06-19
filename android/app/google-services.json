@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "521289064341-einjj77h52fcfbivecb51jan4buvrchc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.picksleagues_flutter",
+            "certificate_hash": "3be0596b295515185d67976837e3b8750797f89c"
+          }
+        },
+        {
           "client_id": "521289064341-3eitldskbkvo8gqloodje7s6njoq6cr3.apps.googleusercontent.com",
           "client_type": 3
         }
