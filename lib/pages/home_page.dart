@@ -4,9 +4,17 @@ import '../data/mock_data.dart';
 import '../widgets/league_card.dart';
 import '../app_theme.dart';
 import 'package:go_router/go_router.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
+
+  Future<void> _signOut(BuildContext context) async {
+    await FirebaseAuth.instance.signOut();
+    if (context.mounted) {
+      context.go('/login');
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -47,9 +55,9 @@ class HomePage extends StatelessWidget {
               ListTile(
                 leading: const Icon(Icons.logout),
                 title: const Text('Sign Out'),
-                onTap: () {
+                onTap: () async {
                   Navigator.of(context).pop();
-                  Navigator.of(context).pushReplacementNamed('/login');
+                  await _signOut(context);
                 },
               ),
               ListTile(

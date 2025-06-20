@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'pages/login_page.dart';
 import 'pages/home_page.dart';
 import 'pages/profile_page.dart';
@@ -33,8 +34,13 @@ class AppRouter {
       ),
     ],
     redirect: (context, state) {
-      // For now, always allow navigation. Add auth logic later.
-      return null;
+      final user = FirebaseAuth.instance.currentUser;
+      final loggingIn = state.matchedLocation == '/login';
+      if (user == null) {
+        return loggingIn ? null : '/login';
+      } else {
+        return loggingIn ? '/home' : null;
+      }
     },
   );
 }

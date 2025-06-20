@@ -1,0 +1,30 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "picksleagues-flutter",
+          "appId": "1:521289064341:android:70473483e5bc7bc8c6209c",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "ios": {
+        "default": {
+          "projectId": "picksleagues-flutter",
+          "appId": "1:521289064341:ios:dbb0c8a738307e61c6209c",
+          "uploadDebugSymbols": false,
+          "fileOutput": "ios/Runner/GoogleService-Info.plist"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "picksleagues-flutter",
+          "configurations": {
+            "android": "1:521289064341:android:70473483e5bc7bc8c6209c",
+            "ios": "1:521289064341:ios:dbb0c8a738307e61c6209c"
+          }
+        }
+      }
+    }
+  }
+}
