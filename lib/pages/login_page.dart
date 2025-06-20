@@ -120,14 +120,43 @@ class _LoginPageState extends State<LoginPage> {
                             style: TextStyle(
                               color: Color(0xFF3C4043),
                               fontWeight: FontWeight.w500,
+                              fontSize: 16,
+                              letterSpacing: 0.5,
                             ),
                           ),
-                          style: OutlinedButton.styleFrom(
-                            backgroundColor: Colors.white,
-                            side: const BorderSide(color: Color(0xFFDDDFE2)),
-                            padding: const EdgeInsets.symmetric(vertical: 12),
-                            textStyle: const TextStyle(fontSize: 16),
-                          ),
+                          style:
+                              OutlinedButton.styleFrom(
+                                backgroundColor: Colors.white,
+                                foregroundColor: const Color(0xFF3C4043),
+                                side: const BorderSide(
+                                  color: Color(0xFFDADCE0),
+                                ),
+                                minimumSize: const Size.fromHeight(48),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(4),
+                                ),
+                                padding: const EdgeInsets.symmetric(
+                                  vertical: 0,
+                                  horizontal: 12,
+                                ),
+                                textStyle: const TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                                elevation: 0,
+                              ).copyWith(
+                                overlayColor:
+                                    MaterialStateProperty.resolveWith<Color?>((
+                                      Set<MaterialState> states,
+                                    ) {
+                                      if (states.contains(
+                                        MaterialState.pressed,
+                                      )) {
+                                        return const Color(0xFFF7F8F8);
+                                      }
+                                      return null;
+                                    }),
+                              ),
                           onPressed: () => _handleGoogleSignIn(context),
                         ),
                       ),
