@@ -1,45 +1,45 @@
 {
   "project_info": {
-    "project_number": "521289064341",
-    "project_id": "picksleagues-flutter",
-    "storage_bucket": "picksleagues-flutter.firebasestorage.app"
+    "project_number": "967241275325",
+    "project_id": "picksleagues-dev",
+    "storage_bucket": "picksleagues-dev.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:521289064341:android:70473483e5bc7bc8c6209c",
+        "mobilesdk_app_id": "1:967241275325:android:46d833de3d240f1081a4d4",
         "android_client_info": {
-          "package_name": "com.example.picksleagues_flutter"
+          "package_name": "com.example.picksleagues_flutter.dev"
         }
       },
       "oauth_client": [
         {
-          "client_id": "521289064341-einjj77h52fcfbivecb51jan4buvrchc.apps.googleusercontent.com",
+          "client_id": "967241275325-3dvf8dr7do206bfvg1hhvo5ge2gv4avf.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.picksleagues_flutter",
+            "package_name": "com.example.picksleagues_flutter.dev",
             "certificate_hash": "3be0596b295515185d67976837e3b8750797f89c"
           }
         },
         {
-          "client_id": "521289064341-3eitldskbkvo8gqloodje7s6njoq6cr3.apps.googleusercontent.com",
+          "client_id": "967241275325-v6cc5g3nj26lakkklehk2li9fmedoe4m.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDcK2hlD2Ij5BeMSNH9iVyb_V7tEPQXoKk"
+          "current_key": "AIzaSyD-z8r9ER7tLNQfoOODXvYcvlbEg_tsu58"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "521289064341-3eitldskbkvo8gqloodje7s6njoq6cr3.apps.googleusercontent.com",
+              "client_id": "967241275325-v6cc5g3nj26lakkklehk2li9fmedoe4m.apps.googleusercontent.com",
               "client_type": 3
             },
             {
-              "client_id": "521289064341-lgp9tac6odq2v8lager2ugj4fr9sl6oe.apps.googleusercontent.com",
+              "client_id": "967241275325-3dl1b99824aabh4erigh4tc3lnmkr3d4.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
                 "bundle_id": "com.example.picksleaguesFlutter"

@@ -3,25 +3,25 @@
     "platforms": {
       "android": {
         "default": {
-          "projectId": "picksleagues-flutter",
-          "appId": "1:521289064341:android:70473483e5bc7bc8c6209c",
+          "projectId": "picksleagues-dev",
+          "appId": "1:967241275325:android:f0d53ec8fc6e234681a4d4",
           "fileOutput": "android/app/google-services.json"
         }
       },
       "ios": {
         "default": {
-          "projectId": "picksleagues-flutter",
-          "appId": "1:521289064341:ios:dbb0c8a738307e61c6209c",
+          "projectId": "picksleagues-dev",
+          "appId": "1:967241275325:ios:39c7718f148bbc1f81a4d4",
           "uploadDebugSymbols": false,
           "fileOutput": "ios/Runner/GoogleService-Info.plist"
         }
       },
       "dart": {
         "lib/firebase_options.dart": {
-          "projectId": "picksleagues-flutter",
+          "projectId": "picksleagues-dev",
           "configurations": {
-            "android": "1:521289064341:android:70473483e5bc7bc8c6209c",
-            "ios": "1:521289064341:ios:dbb0c8a738307e61c6209c"
+            "android": "1:967241275325:android:f0d53ec8fc6e234681a4d4",
+            "ios": "1:967241275325:ios:39c7718f148bbc1f81a4d4"
           }
         }
       }

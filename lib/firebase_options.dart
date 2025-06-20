@@ -50,21 +50,20 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDcK2hlD2Ij5BeMSNH9iVyb_V7tEPQXoKk',
-    appId: '1:521289064341:android:70473483e5bc7bc8c6209c',
-    messagingSenderId: '521289064341',
-    projectId: 'picksleagues-flutter',
-    storageBucket: 'picksleagues-flutter.firebasestorage.app',
+    apiKey: 'AIzaSyD-z8r9ER7tLNQfoOODXvYcvlbEg_tsu58',
+    appId: '1:967241275325:android:f0d53ec8fc6e234681a4d4',
+    messagingSenderId: '967241275325',
+    projectId: 'picksleagues-dev',
+    storageBucket: 'picksleagues-dev.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCCZjlHerkdWTN2vIISVfx8KHQ6Zv4nFnw',
-    appId: '1:521289064341:ios:dbb0c8a738307e61c6209c',
-    messagingSenderId: '521289064341',
-    projectId: 'picksleagues-flutter',
-    storageBucket: 'picksleagues-flutter.firebasestorage.app',
-    androidClientId: '521289064341-einjj77h52fcfbivecb51jan4buvrchc.apps.googleusercontent.com',
-    iosClientId: '521289064341-lgp9tac6odq2v8lager2ugj4fr9sl6oe.apps.googleusercontent.com',
+    apiKey: 'AIzaSyCoPp2KmKOrMWrptMB_CFd1GJh8mjRF37s',
+    appId: '1:967241275325:ios:39c7718f148bbc1f81a4d4',
+    messagingSenderId: '967241275325',
+    projectId: 'picksleagues-dev',
+    storageBucket: 'picksleagues-dev.firebasestorage.app',
+    iosClientId: '967241275325-3dl1b99824aabh4erigh4tc3lnmkr3d4.apps.googleusercontent.com',
     iosBundleId: 'com.example.picksleaguesFlutter',
   );
 
