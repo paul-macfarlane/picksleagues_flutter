@@ -72,7 +72,7 @@ class _LoginPageState extends State<LoginPage> {
                 Text(
                   'Compete with friends to see who is the best at making NFL picks!',
                   style: theme.textTheme.titleMedium?.copyWith(
-                    color: colorScheme.onBackground.withOpacity(0.7),
+                    color: colorScheme.onSurface.withOpacity(0.7),
                   ),
                   textAlign: TextAlign.center,
                 ),
@@ -146,11 +146,11 @@ class _LoginPageState extends State<LoginPage> {
                                 elevation: 0,
                               ).copyWith(
                                 overlayColor:
-                                    MaterialStateProperty.resolveWith<Color?>((
-                                      Set<MaterialState> states,
+                                    WidgetStateProperty.resolveWith<Color?>((
+                                      Set<WidgetState> states,
                                     ) {
                                       if (states.contains(
-                                        MaterialState.pressed,
+                                        WidgetState.pressed,
                                       )) {
                                         return const Color(0xFFF7F8F8);
                                       }
